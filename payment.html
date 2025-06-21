@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    img.qr {
+      width: 200px;
+      height: 200px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .info {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Pay with UPI QR</h2>
+    <p class="info">Scan this QR using any UPI app (Google Pay, Paytm, PhonePe)</p>
+    
+    <!-- Replace the src with your actual QR code image -->
+    <img src="./image/WhatsApp Image 2025-06-21 at 15.24.07_a123b7ca.jpg" alt="UPI QR Code" class="qr">
+    
+    <p><strong>Amount:</strong> ₹7500</p>
+    
+    <button class="btn" onclick="confirmPayment()">Confirm Payment</button>
+  </div>
+
+  <script>
+    function confirmPayment() {
+      alert("Thank you! Your payment will be verified shortly.");
+    }
+  </script>
+
+</body>
+</html>

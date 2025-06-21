@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: auto;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .label {
+      font-weight: bold;
+      color: #b30000;
+    }
+    .mailing-address {
+      background-color: #b30000;
+      color: white;
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+    }
+    .address-details {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+    }
+    .detail {
+      margin-bottom: 10px;
+    }
+    .detail span {
+      font-weight: bold;
+      color: #b30000;
+    }
+      table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background-color: white;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    .delete-button {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+    
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .course {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #b30000;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .add-btn {
+      background-color: #ff5722;
+    }
+
+    .submit-btn {
+      background-color: #009688;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div><span class="label">Roll No:</span> 2300270110031</div>
+      <div><span class="label">Enrollment No:</span> 230027011022536</div>
+      <div><span class="label">Candidate Name:</span> Vishal Panwar</div>
+    </div>
+    <div class="row">
+      <div><span class="label">Course:</span> B.Tech</div>
+      <div><span class="label">Branch:</span> Computer Science and Information Technology</div>
+      <div><span class="label">Semester:</span> 2</div>
+    </div>
+
+    <div class="mailing-address">
+      Mailing Address<br>
+      *Please fill this address correctly.
+    </div>
+    <div class="address-details">
+      <div class="detail"><span>Address:</span> Shamli Uttar Pradesh,201015</div>
+      <div class="detail"><span>Pin Code:</span> 854105</div>
+      <div class="detail"><span>State:</span> Uttar Pradesh</div>
+      <div class="detail"><span>Country:</span> India</div>
+      <div class="detail"><span>City/District:</span> Shamli</div>
+    </div>
+  </div>
+    <h1>Subject Enrollment Details</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>S.no</th>
+        <th>Subject Code</th>
+        <th>Subject Name</th>
+        <th>Paper Type</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>BOE402</td>
+        <td>Automation and Robotics</td>
+        <td>Elective</td>
+        <td class="delete-button">DELETE</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>BCS401</td>
+        <td>Operating System</td>
+        <td>Regular</td>
+        <td class="delete-button">DELETE</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>BCS402</td>
+        <td>Theory of Automata and Formal Languages</td>
+        <td>Regular</td>
+        <td class="delete-button">DELETE</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>BCS403</td>
+        <td>Object Oriented Programming with Java</td>
+        <td>Regular</td>
+        <td class="delete-button">DELETE</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>BAS401</td>
+        <td>Technical Communication</td>
+        <td>Elective</td>
+        <td class="delete-button">DELETE</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>BCC401</td>
+        <td>Cyber Security</td>
+        <td>Elective</td>
+        <td class="delete-button">DELETE</td>
+      </tr>
+    </tbody>
+  </table>
+
+    <h2>NEP Courses (Optional)</h2>
+
+  <form>
+    <div class="courses">
+      <label class="course"><input type="checkbox" name="nep" value="MNHV401"> MNHV401</label>
+      <label class="course"><input type="checkbox" name="nep" value="MNPM401"> MNPM401</label>
+      <label class="course"><input type="checkbox" name="nep" value="MNEE401"> MNEE401</label>
+      <label class="course"><input type="checkbox" name="nep" value="MNGT401"> MNGT401</label>
+      <label class="course"><input type="checkbox" name="nep" value="MNEV401"> MNEV401</label>
+      <label class="course"><input type="checkbox" name="nep" value="MNRB401"> MNRB401</label>
+      <label class="course"><input type="checkbox" name="nep" value="MNTT401"> MNTT401</label>
+      <label class="course"><input type="checkbox" name="nep" value="MNWT401"> MNWT401</label>
+      <label class="course"><input type="checkbox" name="nep" value="HTCS401"> HTCS401</label>
+    </div>
+
+    <div class="buttons">
+      <button type="button" class="add-btn">ADD NEP COURSES</button>
+      <button type="submit" class="submit-btn"><a href="./payment.html">SUBMIT EXAM FORM</a></button>
+    </div>
+  </form>
+</body>
+</html>

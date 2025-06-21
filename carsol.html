@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Carousel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f3f3f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .carousel {
+      position: relative;
+      width: 80%;
+      max-width: 700px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      transition: 0.5s;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .buttons button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .buttons button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="https://via.placeholder.com/700x400?text=Slide+1" alt="Slide 1"></div>
+      <div class="slide"><img src="https://via.placeholder.com/700x400?text=Slide+2" alt="Slide 2"></div>
+      <div class="slide"><img src="https://via.placeholder.com/700x400?text=Slide+3" alt="Slide 3"></div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="prevSlide()">❮</button>
+      <button onclick="nextSlide()">❯</button>
+    </div>
+  </div>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+
+    function showSlide(i) {
+      index = (i + total) % total;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+
+    // Auto Slide
+    setInterval(() => {
+      nextSlide();
+    }, 3000); // every 3 seconds
+  </script>
+
+</body>
+</html>

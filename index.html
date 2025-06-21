@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKGEC | Ajay Kumar Garg Engineering College</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="./image/AKGEC_1_0.png" alt="AKGEC Logo" class="logo">
+
+    <h1>Ajay Kumar Garg Engineering College</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2><a href="exam.html">Click here to Fill Exam Form</a></h2>
+  </section>
+
+  <section id="about">
+    <h2>About AKGEC</h2>
+    <p>AKGEC, Ghaziabad, affiliated to Dr. A.P.J. Abdul Kalam Technical University, is known for excellence in engineering education and research.</p>
+  </section>
+  <div class="carousel">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="./image/download.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="./image/download (1).jpg" alt="Slide 2"></div>
+      <div class="slide"><img src="./image/download (2).jpg" alt="Slide 3"></div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="prevSlide()">❮</button>
+      <button onclick="nextSlide()">❯</button>
+    </div>
+  </div>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+
+    function showSlide(i) {
+      index = (i + total) % total;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+
+    // Auto Slide
+    setInterval(() => {
+      nextSlide();
+    }, 3000); // every 3 seconds
+  </script>
+
+  <section id="departments">
+    <h2>Departments</h2>
+    <ul>
+      <li>Computer Science and Engineering</li>
+      <li>Electronics and Communication</li>
+      <li>Mechanical Engineering</li>
+      <li>Electrical and Electronics</li>
+      <li>Information Technology</li>
+    </ul>
+  </section>
+
+  <section id="admissions">
+    <h2>Admissions</h2>
+    <p>Admissions are based on the merit of JEE Main and UPSEE. Visit <a href="https://akgec.ac.in">official website</a> for more info.</p>
+  </section>
+
+  <section id="facilities">
+    <h2>Facilities</h2>
+    <p>AKGEC offers modern labs, a central library, hostels, sports complex, and Wi-Fi enabled campus.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@akgec.ac.in</p>
+    <p>Phone: +91-120-2761775</p>
+    <p>Address: 27th Km Milestone, Delhi-Meerut Expressway, Ghaziabad, Uttar Pradesh</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ajay Kumar Garg Engineering College. All rights reserved.</p>
+  </footer>
+</body>
+</html>
